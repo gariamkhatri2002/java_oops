@@ -1,0 +1,423 @@
+Q.1)first way :
+class A
+	instance variable :
+	method :two number addition 
+
+class Main 
+main method 
+
+ANS:-
+class A{
+    int a=1,b=1;
+    int add(){
+        return a+b;
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+        A obj=new A();
+        System.out.println(obj.add());
+
+    }
+}
+-----------------------------------------------------
+Q.2)second way : 
+
+class A
+	instance variable a,b,c,d,e,f
+	method :two variable addition
+	method :two variable sub
+	method :two variable div
+
+class Main 
+	instance variable :
+	method :two number addition 
+
+main method :
+
+ANS:-
+class A{
+    int a,b,c,d,e,f;
+    int add(int x,int y){
+        a=x;
+        b=y;
+        return a+b;
+    }
+    int sub(int x,int y){
+        c=x;
+        d=y;
+        return c-d;
+    }
+    int div(int x,int y){
+        e=x;
+        f=y;
+        return e/f;
+    }
+}
+public class Main1{
+    int a,b;
+    Main1 add(int x,int y){
+        a=x;
+        b=y;
+        System.out.println(a+b);
+        return this;
+    }
+    public static void main(String[] args){
+        A obj=new A();
+        System.out.println(obj.add(2,2));
+        System.out.println(obj.sub(8, 5));
+        System.out.println(obj.div(8, 2));
+
+        Main1 ob=new Main1();
+        ob.add(2,2);
+
+    }
+}
+---------------------------------------------------------------------------
+Q.3)third way : 
+
+class A
+	instance variable a,b,c,d,e,f
+	method :two variable addition
+	method :two variable sub
+	method :two variable div
+
+class Main 
+	instance variable :
+	method :two number addition 
+
+main method :
+
+ANS:-
+class A{
+    int a,b,c,d,e,f;
+    int add(int a,int b){
+        this.a=a;
+        this.b=b;
+        return a+b;
+    }
+    int sub(int c,int d){
+        this.c=c;
+        this.d=d;
+        return c-d;
+    }
+    int div(int e,int f){
+       this.e=e;
+       this.f=f;
+        return e/f;
+    }
+}
+public class Main1{
+    int a,b;
+    Main1 add(int a,int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a+b);
+        return this;
+    }
+    public static void main(String[] args){
+        A obj=new A();
+        System.out.println(obj.add(2,2));
+        System.out.println(obj.sub(8, 5));
+        System.out.println(obj.div(8, 2));
+
+        Main1 ob=new Main1();
+        ob.add(2, 5);
+
+    }
+}
+---------------------------------------------------------------------------
+Q.4)
+getter setter method :
+all primitve data type with String 
+
+ANS:-
+public class Main1{
+    private int a;
+    private float b;
+    private char c;
+    private long d;
+    private double e;
+    private short f;
+    private boolean g;
+    private byte h;
+    private String name;
+    void set(int a,float b,char c,long d,double e,short f,boolean g,byte h,String name){
+        this.a=a;
+        this.b=b;
+        this.c=c;
+        this.d=d;
+        this.e=e;
+        this.f=f;
+        this.g=g;
+        this.h=h;
+        this.name=name;
+    }
+    int getint(){
+        return a;
+    }
+
+    float getfloat(){
+        return b;
+    }
+
+    char getchar(){
+        return c;
+    }
+
+    long getlong(){
+        return d;
+    }
+
+    double getdouble(){
+        return e;
+    }
+    short getshort(){
+        return f;
+    }
+    boolean getboolean(){
+        return g;
+    }
+    byte getbyte(){
+        return h;
+    }
+    String getstring(){
+        return name;
+    }
+
+    public static void main(String[] args){
+        Main1 ob=new Main1();
+        ob.set(12, 2.3f, 'G', 12365478, 123.546987, (short)12302, true, (byte)124, "regex"); 
+        System.out.println(ob.getint());
+        System.out.println(ob.getfloat());
+        System.out.println(ob.getchar());
+        System.out.println(ob.getlong());
+        System.out.println(ob.getdouble());
+        System.out.println(ob.getshort());
+        System.out.println(ob.getboolean());
+        System.out.println(ob.getbyte());
+        System.out.println(ob.getstring());
+        
+
+    }
+}
+------------------------------------------------------------------
+Q.5)
+user input :
+
+name
+fname
+nmame
+class
+address
+contact 
+roll_no 
+gender 
+marks 
+getter setter
+
+ANS:-
+import java.util.*;
+public class Main1{
+   
+   private String name,fname,mname,gender,address;
+   private int classname,rollno,marks;
+   private long contact;
+   void set(String name,String fname, String mname, String gender,String address,int classname,int rollno,int marks,long contact ){
+    this.name=name;
+    this.fname=fname;
+    this.mname=mname;
+    this.gender=gender;
+    this.address=address;
+    this.classname=classname;
+    this.rollno=rollno;
+    this.marks=marks;
+    this.contact=contact;
+
+   }
+   String getname(){
+    return name;
+   } 
+   String getfname(){
+    return fname;
+   } 
+   String getmname(){
+    return mname;
+   }
+   int getclass(){
+    return classname;
+   } 
+   String getaddress(){
+    return address;
+   }
+   long getcontact(){
+    return contact;
+   }
+   int getrollno(){
+    return rollno;
+   }
+   String getgender(){
+    return gender;
+   }
+   int getmarks(){
+    return marks;
+   }
+   
+
+    public static void main(String[] args){
+        Scanner ob=new Scanner(System.in);
+        System.out.print("Name:");
+        String name=ob.nextLine();
+        System.out.print("fatherName:");
+        String fname=ob.nextLine();
+        System.out.print("motherName:");
+        String mname=ob.nextLine();
+        System.out.print("classname:");
+        int classname=ob.nextInt();
+        ob.nextLine();
+        System.out.print("address:");
+        String address=ob.nextLine();
+        System.out.print("contact:");
+        long contact=ob.nextLong();
+        System.out.print("rollno:");
+        int rollno=ob.nextInt();
+        System.out.print("gender:");
+        String gender=ob.next();
+        
+        System.out.print("marks:");
+        int marks=ob.nextInt();
+
+        System.out.println();
+        Main1 obj=new Main1();
+        obj.set(name, fname, mname, gender, address, classname, rollno, marks, contact);
+        System.out.println(obj.getname());
+        System.out.println(obj.getfname());
+        System.out.println(obj.getmname());
+        System.out.println(obj.getclass());
+        System.out.println(obj.getaddress());
+        System.out.println(obj.getcontact());
+        System.out.println(obj.getrollno());
+        System.out.println(obj.getgender());
+        System.out.println(obj.getmarks());
+        
+
+    }
+}
+------------------------------------------------------------------
+Q.6)
+company 
+
+empname
+eid
+efname
+econtact
+eaddress 
+ealternate_number 
+salary 
+edepartment 
+bankaccountnumber
+post 
+
+getter setter 
+
+ANS:-
+import java.util.*;
+public class Main1{
+   
+   private String empname,efname,eaddress,edepartment,post;
+   private int eid,salary,ealternate_number;
+   private long econtact,bankaccountnumber;
+   void set(String empname,String efname, String edepartment, String post,String eaddress,int eid,int salary,int ealternate_number,long econtact,long bankaccountnumber ){
+    this.empname=empname;
+    this.efname=efname;
+    this.edepartment=edepartment;
+    this.post=post;
+    this.eaddress=eaddress;
+    this.eid=eid;
+    this.salary=salary;
+    this.ealternate_number=ealternate_number;
+    this.econtact=econtact;
+    this.bankaccountnumber=bankaccountnumber;
+
+   }
+   String getempname(){
+    return empname;
+   } 
+   int geteid(){
+    return eid;
+   } 
+   String getfname(){
+    return efname;
+   }
+   long getcontact(){
+    return econtact;
+   }
+   String geteaddress(){
+    return eaddress;
+   }
+   int getealternate_number(){
+    return ealternate_number;
+   } 
+   
+   
+   int getsalary(){
+    return salary;
+   }
+   String getedepartment(){
+    return edepartment;
+   }
+   long getbankaccountnumber(){
+    return bankaccountnumber;
+   }
+   String getpost(){
+    return post;
+   }
+   
+
+    public static void main(String[] args){
+        Scanner ob=new Scanner(System.in);
+        System.out.print("Name:");
+        String name=ob.nextLine();
+        System.out.print("id:");
+        int eid=ob.nextInt();
+        ob.nextLine();
+        System.out.print("fatherName:");
+        String efname=ob.nextLine();
+        System.out.print("contact:");
+        long econtact=ob.nextLong();
+        ob.nextLine();
+        System.out.print("address:");
+        String eaddress=ob.nextLine();
+        System.out.print("alternate number:");
+        int ealternate_number=ob.nextInt();
+       
+       
+        System.out.print("salary:");
+        int salary=ob.nextInt();
+        System.out.print("department:");
+        String edepartment=ob.next();
+        
+        System.out.print("bankaccountnumber:");
+        long bankaccountnumber=ob.nextLong();
+        System.out.print("post:");
+        String post=ob.next();
+
+        System.out.println();
+        Main1 obj=new Main1();
+        obj.set(name, efname, edepartment, post, eaddress, eid, salary, ealternate_number, econtact, bankaccountnumber);
+        System.out.println(obj.getempname());
+        System.out.println(obj.geteid());
+        System.out.println(obj.getfname());
+        System.out.println(obj.getcontact());
+        System.out.println(obj.geteaddress());
+        System.out.println(obj.getealternate_number());
+        System.out.println(obj.getsalary());
+        System.out.println(obj.getedepartment());
+        System.out.println(obj.getbankaccountnumber());
+        System.out.println(obj.getpost());
+        
+
+    }
+}
+----------------------------------------------------------------
+
