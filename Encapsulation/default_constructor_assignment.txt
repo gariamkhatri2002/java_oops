@@ -1,0 +1,295 @@
+Q.1)
+two number addition getter setter 
+two number multiplication getter setter 
+two number division getter setter 
+two number modular getter setter 
+two number substraction getter setter 
+
+ANS:-
+public class Main1{
+    int a,b;
+    void set(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int getadd(){
+        return a+b;
+    }
+    int getmulti(){
+        return a*b;
+    }
+    int getdiv(){
+        return a/b;
+    }
+    int getmod(){
+        return a%b;
+    }
+    int getsub(){
+        return a-b;
+    }
+    public static void main(String[] args){
+           Main1 obj=new Main1();
+           obj.set(5, 2);
+           System.out.println(obj.getadd());
+           System.out.println(obj.getdiv());
+           System.out.println(obj.getmulti());
+           System.out.println(obj.getmod());
+           System.out.println(obj.getsub());
+    }
+}
+------------------------------------------------
+Q.2)
+class A
+constructor :two number addition
+
+class B
+constructor :two number multiplication
+
+class C
+constructor :two number division
+
+class D
+constructor :two number modular
+
+class Main 
+constructor :two number substraction 
+
+main method access 
+
+ANS:-
+class A{
+    A(){
+        int a=2,b=3;
+        int c=a+b;
+        System.out.println("add:"+c);
+    }
+}
+class B{
+    B(){
+        int a=2,b=4;
+        int c=a*b;
+        System.out.println("multiplication:"+c);
+    }
+}
+class C{
+    C(){
+        int a=6,b=3;
+        int c=a/b;
+        System.out.println("division:"+c);
+    }
+}
+class D{
+    D(){
+        int a=7,b=3;
+        int c=a%b;
+        System.out.println("modular:"+c);
+    }
+}
+
+public class Main1{
+    Main1(){
+        int a=9,b=3;
+        int c=a-b;
+        System.out.println("sub:"+c);
+    }
+    public static void main(String[] args){
+        new A();
+        new B();
+        new C();
+        new D();
+        new Main1();
+           
+    }
+}
+---------------------------------------------------------------------
+Q.3)
+class A
+constructor :two number addition
+method :no return and no argument 
+
+class B
+constructor :two number multiplication
+method :no return and  argument 
+
+class C
+constructor :two number division
+method : return and no argument 
+
+class D
+constructor :two number modular
+method : return and  argument 
+
+class Main 
+constructor :two number substraction 
+method :covariant return type 
+
+main method access
+
+ANS:-
+class A{
+    A(){
+        int a=2,b=3;
+        int c=a+b;
+        System.out.println("add:"+c);
+    }
+    void a1(){
+        int a=45;
+        System.out.println("number:"+a);
+    }
+}
+class B{
+    B(){
+        int a=2,b=4;
+        int c=a*b;
+        System.out.println("multiplication:"+c);
+    }
+    void b1(int b){
+        System.out.println(b);
+    }
+}
+class C{
+    C(){
+        int a=6,b=3;
+        int c=a/b;
+        System.out.println("division:"+c);
+    }
+    String c1(){
+        String a="regex";
+        return a;
+    }
+}
+class D{
+    D(){
+        int a=7,b=3;
+        int c=a%b;
+        System.out.println("modular:"+c);
+    }
+    String d1(String name){
+        return name;
+    }
+}
+
+public class Main1{
+    Main1(){
+        int a=9,b=3;
+        int c=a-b;
+        System.out.println("sub:"+c);
+    }
+    int a;
+    Main1 d2(int a){
+        this.a=a;
+        System.out.println(a);
+        return this;
+    }
+    public static void main(String[] args){
+        A oba=new A();
+        oba.a1();
+        B obb=new B();
+        obb.b1(25);
+        C obc=new C();
+        System.out.println(obc.c1());
+        D obd=new D();
+        System.out.println(obd.d1("garima"));
+        Main1 object=new Main1();
+        object.d2(63);
+    }
+} 
+-------------------------------------------------------------------------
+Q.4)
+through instance variable :
+
+class A
+constructor :two number addition
+
+class B
+constructor :two number multiplication
+
+class C
+constructor :two number division
+
+class D
+constructor :two number modular
+
+class Main 
+constructor :two number substraction 
+
+main method access
+
+ANS:-
+class A{
+    int a=2,b=3;
+    A(){
+        int c=a+b;
+        System.out.println("add:"+c);
+    }
+   
+}
+class B{
+    int a=2,b=4;
+    B(){
+        
+        int c=a*b;
+        System.out.println("multiplication:"+c);
+    }
+    
+}
+class C{
+    int a=6,b=3;
+    C(){
+        int c=a/b;
+        System.out.println("division:"+c);
+    }
+    
+}
+class D{
+    int a=7,b=3;
+    D(){
+        int c=a%b;
+        System.out.println("modular:"+c);
+    }
+   
+}
+
+public class Main1{
+    int a=9,b=3;
+    Main1(){
+        int c=a-b;
+        System.out.println("sub:"+c);
+    }
+    
+    public static void main(String[] args){
+        new A();
+        new B();
+        new C();
+        new D();
+        new Main1();
+    }
+} 
+-----------------------------------------------------------------------
+Q.5)
+make memory in copy : 
+
+import java.util.*;
+
+public class Main {
+    Main() {
+        System.out.println("Hello wolrd");
+    }
+
+    void show() {
+        System.out.println("show method");
+    }
+
+    public static void main(String[] args) {
+        new Main();
+        Main p = new Main();
+        p.show();
+        p.show();
+        p.show();
+        Main k = new Main();
+        k.show();
+        new Main();
+    }
+}
+------------------------------------------------------------
+
