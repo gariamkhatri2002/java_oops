@@ -1,0 +1,437 @@
+parameterised constructor :
+------------------------------------------------------------
+Q.1)
+class A
+constructor :two number addition
+
+class B
+constructor :two number multiplication
+
+class C
+constructor :two number division
+
+class D
+constructor :two number modular
+
+class Main 
+constructor :two number substraction 
+
+main method access
+
+ANS:-
+class A{
+    A(int a,int b){
+        System.out.println(a+b);
+    }
+}
+class B{
+    B(int a,int b){
+        System.out.println(a*b);
+    }
+}
+class C{
+    C(int a,int b){
+        System.out.println(a/b);
+    }
+}
+class D{
+    D(int a,int b){
+        System.out.println(a%b);
+    }
+}
+
+
+public class Main1{
+    Main1(int a,int b){
+        System.out.println(a-b);
+    }
+    public static void main(String[] args){
+        new A(2,3);
+        new B(6, 2);
+        new C(6, 2);
+        new D(7, 2);
+        new Main1(5,3);
+        
+
+    }
+} 
+----------------------------------------------------
+Q.2)
+class A
+constructor :two number addition
+method :no return and no argument 
+
+class B
+constructor :two number multiplication
+method :no return and  argument 
+
+class C
+constructor :two number division
+method : return and no argument 
+
+class D
+constructor :two number modular
+method : return and  argument 
+
+class Main 
+constructor :two number substraction 
+method :covariant return type 
+
+main method access
+
+ANS:-
+class A{
+    A(int a,int b){
+        System.out.println(a+b);
+    }
+    void add(){
+        int a=1,b=3;
+        System.out.println(a+b);
+    }
+}
+class B{
+    B(int a,int b){
+        System.out.println(a*b);
+    }
+    void multi(int a,int b){
+        System.out.println(a*b);
+    }
+}
+class C{
+    C(int a,int b){
+        System.out.println(a/b);
+    }
+    int div(){
+        int a=4,b=2;
+        return a/b;
+    }
+}
+class D{
+    D(int a,int b){
+        System.out.println(a%b);
+    }
+    int mod(int a,int b){
+        return a%b;
+    }
+}
+
+
+public class Main1{
+    Main1(int a,int b){
+        System.out.println(a-b);
+    }
+    Main1 name(){
+        String name="regex";
+        System.out.println(name);
+        return this;
+    }
+    public static void main(String[] args){
+        A oba =new A(5, 2);
+        oba.add();
+        B obb=new B(6, 2);
+        obb.multi(5,2);
+        C obc=new C(6, 2);
+        obc.div();
+
+        D obd=new D(7, 2);
+        obd.mod(9, 2);
+
+        Main1 object=new Main1(5,3);
+        object.name();
+        
+
+    }
+} 
+-----------------------------------------------------------------
+Q.3)
+through instance variable :
+
+class A
+constructor :two number addition
+
+class B
+constructor :two number multiplication
+
+class C
+constructor :two number division
+
+class D
+constructor :two number modular
+
+class Main 
+constructor :two number substraction 
+
+main method access 
+
+ANS:-
+class A{
+    int a,b;
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a+b);
+    }
+}
+class B{
+    int a,b;
+    B(int a,int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a*b);
+    }
+}
+class C{
+    int a,b;
+    C(int a,int b){
+       this.a=a;
+       this.b=b;
+       System.out.println(a/b);
+    }
+}
+class D{
+    int a,b;
+    D(int a,int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a%b);
+    }
+}
+public class Main1{
+    int a,b;
+    Main1(int a,int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a-b);
+    }
+    public static void main(String[] args){
+        new A(5, 2);
+        new B(2, 2);
+        new C(8, 2);
+        new D(9, 4);
+        new Main1(7, 4);
+
+    }
+}
+-------------------------------------------------------------
+Q.4)
+class A
+no return and no argument 
+
+class B ex A 
+no return and argument 
+
+class Main 
+main access
+
+AMS:-
+class A{
+    void add(){
+        int a=3,b=4;
+        System.out.println(a+" "+b);
+    }
+    
+}
+class B extends A{
+    void add(String a){
+        System.out.println(a);
+    }
+}
+
+public class Main1{
+
+    public static void main(String[] args){
+        B ob=new B();
+        ob.add("regex");
+        ob.add();
+
+    }
+}
+-------------------------------------------------------------
+Q.5)
+class A
+covariant return type 
+
+class B ex A 
+covariant return type 
+
+class Main 
+
+main access
+
+ANS:-
+class A{
+    A add(){
+        int a=5;
+        System.out.println(a);
+        return this;
+    }
+    
+}
+class B extends A{
+    B name(){
+        String name="regex";
+        System.out.println(name);
+        return this;
+    }   
+}
+
+public class Main1{
+
+    public static void main(String[] args){
+        B ob=new B();
+        ob.add();
+        ob.name();
+        
+
+    }
+}
+------------------------------------------------
+Q.6)
+class A
+covariant return type
+ 
+class Main ex A
+covariant return type 
+
+main access
+
+ANS:-
+class A{
+    A add(){
+        int a=5;
+        System.out.println(a);
+        return this;
+    }
+    
+}
+
+public class Main1 extends A{
+    Main1 name(){
+        String name="regex";
+        System.out.println(name);
+        return this;
+    }   
+    public static void main(String[] args){
+        Main1 ob=new Main1();
+        ob.add();
+        ob.name();
+        
+
+    }
+}
+-------------------------------------------------------------
+Q.7)
+class College 
+instance variable : 
+
+cname
+caddress 
+cnumber
+cexpertise
+cfacutly 
+
+method :access print 
+
+class Student 
+sname
+sid
+snumber
+scourse
+saddress
+sfname
+smname 
+
+class Main 
+main method access 
+
+ANS:-
+import java.util.Scanner;
+
+class Collage{
+    String cname,caddress,cexpertise,cfacutly; 
+    
+    long cnumber;
+}
+
+class Student extends Collage{
+    String sname,sfname,smname ,scourse,saddress;
+    long sid,snumber;
+    
+    void setcollage(String cname,String caddress,String cexpertise,String cfaculty,long cnumber){
+        this.cname=cname;
+        this.caddress=caddress;
+        this.cexpertise=cexpertise;
+        this.cfacutly=cfaculty;
+        this.cnumber=cnumber;
+    }
+
+    void setstudent(String sname,String sfname,String smname,String scourse,String saddress,long sid,long snumber){
+        this.sname=sname;
+        this.sfname=sfname;
+        this.smname=smname;
+        this.scourse=scourse;
+        this.saddress=saddress;
+        this.sid=sid;
+        this.snumber=snumber;
+    }
+
+    void getcollage(){
+        System.out.println(cname);
+        System.out.println(caddress);
+        System.out.println(cexpertise);
+        System.out.println(cfacutly);
+        System.out.println(cnumber);
+        
+    }
+
+    void getstudent(){
+        System.out.println(sname);
+        System.out.println(sfname);
+        System.out.println(smname);
+        System.out.println(scourse);
+        System.out.println(saddress);
+        System.out.println(sid);
+        System.out.println(snumber);
+       
+    }
+
+}
+
+public class Main1 {
+   
+    public static void main(String[] args){
+        Scanner ob=new Scanner(System.in);
+        System.out.print("cname:");
+        String cname=ob.nextLine();
+        System.out.print("caddress:");
+        String caddress=ob.nextLine();
+        System.out.print("cexpertise:");
+        String cexpertise=ob.nextLine();
+        System.out.print("cfaculty:");
+        String cfaculty=ob.nextLine();
+        System.out.print("cnumber:");
+        long cnumber=ob.nextLong();
+        ob.nextLine();
+        System.out.print("sname:");
+        String sname=ob.nextLine();
+        System.out.print("sfname");
+        String sfname=ob.nextLine();
+        System.out.print("smname");
+        String smname=ob.nextLine();
+        System.out.print("scourse:");
+        String scourse=ob.nextLine();
+        System.out.print("saddress:");
+        String saddress=ob.nextLine();
+        System.out.print("sid:");
+        long sid=ob.nextLong();
+        System.out.print("snumber:");
+        long snumber=ob.nextLong();
+
+
+        Student object=new Student();
+        object.setcollage(cname, caddress, cexpertise, cfaculty, cnumber);
+        object.setstudent(sname, sfname, smname, scourse, saddress, sid, snumber);
+        object.getcollage();
+        object.getstudent();
+    }
+}
