@@ -1,0 +1,546 @@
+Q.1)
+class A
+no return and no argument 
+
+class B ex A 
+no return and argument 
+
+class Main 
+main access
+
+AMS:-
+class A{
+    void add(){
+        int a=3,b=4;
+        System.out.println(a+" "+b);
+    }
+    
+}
+class B extends A{
+    void add(String a){
+        System.out.println(a);
+    }
+}
+
+public class Main1{
+
+    public static void main(String[] args){
+        B ob=new B();
+        ob.add("regex");
+        ob.add();
+
+    }
+}
+-------------------------------------------------------------
+Q.2)
+class A
+covariant return type 
+
+class B ex A 
+covariant return type 
+
+class Main 
+
+main access
+
+ANS:-
+class A{
+    A add(){
+        int a=5;
+        System.out.println(a);
+        return this;
+    }
+    
+}
+class B extends A{
+    B name(){
+        String name="regex";
+        System.out.println(name);
+        return this;
+    }   
+}
+
+public class Main1{
+
+    public static void main(String[] args){
+        B ob=new B();
+        ob.add();
+        ob.name();
+        
+
+    }
+}
+------------------------------------------------
+Q.3)
+class A
+covariant return type
+ 
+class Main ex A
+covariant return type 
+
+main access
+
+ANS:-
+class A{
+    A add(){
+        int a=5;
+        System.out.println(a);
+        return this;
+    }
+    
+}
+
+public class Main1 extends A{
+    Main1 name(){
+        String name="regex";
+        System.out.println(name);
+        return this;
+    }   
+    public static void main(String[] args){
+        Main1 ob=new Main1();
+        ob.add();
+        ob.name();
+        
+
+    }
+}
+-------------------------------------------------------------
+Q.4)
+class College 
+instance variable : 
+
+cname
+caddress 
+cnumber
+cexpertise
+cfacutly 
+
+method :access print 
+
+class Student 
+sname
+sid
+snumber
+scourse
+saddress
+sfname
+smname 
+
+class Main 
+main method access 
+
+ANS:-
+import java.util.Scanner;
+
+class Collage{
+    String cname,caddress,cexpertise,cfacutly; 
+    
+    long cnumber;
+}
+
+class Student extends Collage{
+    String sname,sfname,smname ,scourse,saddress;
+    long sid,snumber;
+    
+    void setcollage(String cname,String caddress,String cexpertise,String cfaculty,long cnumber){
+        this.cname=cname;
+        this.caddress=caddress;
+        this.cexpertise=cexpertise;
+        this.cfacutly=cfaculty;
+        this.cnumber=cnumber;
+    }
+
+    void setstudent(String sname,String sfname,String smname,String scourse,String saddress,long sid,long snumber){
+        this.sname=sname;
+        this.sfname=sfname;
+        this.smname=smname;
+        this.scourse=scourse;
+        this.saddress=saddress;
+        this.sid=sid;
+        this.snumber=snumber;
+    }
+
+    void getcollage(){
+        System.out.println(cname);
+        System.out.println(caddress);
+        System.out.println(cexpertise);
+        System.out.println(cfacutly);
+        System.out.println(cnumber);
+        
+    }
+
+    void getstudent(){
+        System.out.println(sname);
+        System.out.println(sfname);
+        System.out.println(smname);
+        System.out.println(scourse);
+        System.out.println(saddress);
+        System.out.println(sid);
+        System.out.println(snumber);
+       
+    }
+
+}
+
+public class Main1 {
+   
+    public static void main(String[] args){
+        Scanner ob=new Scanner(System.in);
+        System.out.print("cname:");
+        String cname=ob.nextLine();
+        System.out.print("caddress:");
+        String caddress=ob.nextLine();
+        System.out.print("cexpertise:");
+        String cexpertise=ob.nextLine();
+        System.out.print("cfaculty:");
+        String cfaculty=ob.nextLine();
+        System.out.print("cnumber:");
+        long cnumber=ob.nextLong();
+        ob.nextLine();
+        System.out.print("sname:");
+        String sname=ob.nextLine();
+        System.out.print("sfname");
+        String sfname=ob.nextLine();
+        System.out.print("smname");
+        String smname=ob.nextLine();
+        System.out.print("scourse:");
+        String scourse=ob.nextLine();
+        System.out.print("saddress:");
+        String saddress=ob.nextLine();
+        System.out.print("sid:");
+        long sid=ob.nextLong();
+        System.out.print("snumber:");
+        long snumber=ob.nextLong();
+
+
+        Student object=new Student();
+        object.setcollage(cname, caddress, cexpertise, cfaculty, cnumber);
+        object.setstudent(sname, sfname, smname, scourse, saddress, sid, snumber);
+        object.getcollage();
+        object.getstudent();
+    }
+
+
+-------------------------------------------------------------------------------------
+Q.5)  
+class A
+	instance variable :public 
+	method :value pass 
+
+class B ex A 
+	instance variable :public 
+	method :value pass :A class instance variable + B class instance variable 
+
+class Main :
+main() :child k through 
+
+ANS:-
+class A{
+    int a;
+    int num(int a){
+        this.a=a;
+        return a;
+    }
+}
+class B extends A{
+    int b;
+    int add(int b){
+        this.b=b;
+        return a+b;
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.num(12));
+        System.out.println(ob.add(10));
+        
+    }
+}
+---------------------------------------------------------------------------------
+Q.6)
+class A
+	instance variable :private 
+	method :value pass 
+
+class B ex A 
+	instance variable :public 
+	method :value pass 
+
+class Main :
+main() :child k through 
+
+ANS:-
+error
+
+class A{
+    private int a;
+    int num(int a){
+        this.a=a;
+        return a;
+    }
+}
+class B extends A{
+    int b;
+    int add(int b){
+        this.b=b;
+        return a+b;
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.num(12));
+        System.out.println(ob.add(10));
+        
+    }
+}
+ 
+problem solution code
+ class A{
+    int a;
+    int num(int a){
+        this.a=a;
+        return a;
+    }
+}
+class B extends A{
+    int b;
+    int add(int b){
+        this.b=b;
+        return a+b;
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.num(12));
+        System.out.println(ob.add(10));
+        
+    }
+}
+--------------------------------------------------------------------------------
+Q.7)
+class A
+	instance variable :public 
+	method :value pass 
+
+class B ex A 
+	instance variable :private 
+	method :value pass 
+
+class Main :
+main() :child k through 
+
+error 
+problem solution code
+
+ANS:-
+class A{
+    int a;
+    int num(int a){
+        this.a=a;
+        return a;
+    }
+}
+class B extends A{
+    private int b;
+    int add(int b){
+        this.b=b;
+        return a+b;
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.num(12));
+        System.out.println(ob.add(10));
+        
+    }
+} 
+-------------------------------------------------------------
+Q.8)
+class A
+	instance variable :private 
+	method :value pass 
+
+class B ex A 
+	instance variable :private 
+	method :value pass 
+
+class Main :
+main() :child k through 
+
+ANS:-
+error 
+class A{
+    private String a;
+    String num(String a){
+        this.a=a;
+        return a;
+    }
+}
+class B extends A{
+    private int b;
+    String add(String b){
+        this.b=b;
+        return a+b;
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.num("regex"));
+        System.out.println(ob.add("garima"));
+        
+    }
+}
+
+problem solution code 
+
+class A{
+    String a;
+    void num(String a){
+        this.a=a;
+        
+    }
+}
+class B extends A{
+    String b;
+    void add(String b){
+        this.b=b;
+        
+    }
+    String get(){
+        return a+b;
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+        B ob=new B();
+        ob.num("regex");
+        ob.add("garima");
+        System.out.println(ob.get());
+        
+    }
+}
+-------------------------------------------------------------
+Q.9)
+class A
+	instance variable :protected 
+	method :value pass 
+
+class B ex A 
+	instance variable :public 
+	method :value pass 
+
+class Main :
+main() :child k through 
+
+error(NO ERROR) 
+problem solution code 
+
+ANS:-
+class A{
+    protected int a;
+    int num(int a){
+        this.a=a;
+        return a;
+    }
+}
+class B extends A{
+    int b;
+    int add(int b){
+        this.b=b;
+        return a+b; 
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+       B ob=new B();
+       System.out.println(ob.num(23));
+       System.out.println(ob.add(5));
+    }
+}
+----------------------------------------------------------------------------------
+Q.10)
+class A
+	instance variable :protected 
+	method :value pass 
+
+class B ex A 
+	instance variable :protected 
+	method :value pass 
+
+class Main :
+main() :child k through 
+
+error 
+problem solution code
+ 
+ANS:-
+class A{
+    protected int a;
+    int num(int a){
+        this.a=a;
+        return a;
+    }
+}
+class B extends A{
+    protected int b;
+    int add(int b){
+        this.b=b;
+        return a+b; 
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+       B ob=new B();
+       System.out.println(ob.num(23));
+       System.out.println(ob.add(5));
+    }
+}
+-------------------------------------------------------------
+Q.11)
+class A
+	instance variable :public 
+	method :value pass 
+
+class B ex A 
+	instance variable :protected 
+	method :value pass 
+
+class Main :
+main() :child k through 
+
+error 
+problem solution code 
+
+ANS:-
+class A{
+    int a;
+    void set1(int a){
+        this.a=a;
+        
+    }
+}
+class B extends A{
+
+    protected int b;
+    
+    void set2(int b){
+        this.b=b;
+    }
+    int getadd(){
+        
+        return a+b; 
+    }
+}
+public class Main1{
+    public static void main(String[] args){
+       B ob=new B();
+       ob.set1(12);
+       ob.set2(10);
+       System.out.println(ob.getadd());
+    }
+}
