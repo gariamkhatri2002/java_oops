@@ -1,0 +1,436 @@
+heirarichal inheritance :
+----------------------------------------------------------------------------
+class A
+	method1 :
+
+class B
+	method2 :
+
+class C
+	method3 :
+
+
+class D
+	method4 :
+
+make only D class 
+
+class Main 
+main method :
+
+
+
+class A{
+    
+   void set1(){
+    System.out.println("A class");
+   }
+    
+}
+class B extends A{
+   void set2(){
+    System.out.println("B class");
+   }
+}
+
+class C extends A{
+  void set3(){
+    System.out.println("C class");
+  }
+}
+
+class D extends A{
+   void set4(){
+    System.out.println("D class");
+   }
+}
+
+public class Main1{
+    
+    
+    public static void main(String[] args){
+       B obb=new B();
+       obb.set1();
+       obb.set2();
+       C obc=new C();
+       obc.set1();
+       obc.set3();
+       D obd=new D();
+       obd.set1();
+       obd.set4();
+
+
+    }
+}
+----------------------------------------------------------------------------------
+getter setter method 
+
+class A
+	method1 :
+
+class B
+	method2 :
+
+class C
+	method3 :
+
+
+class D
+	method4 :
+
+
+class Main 
+main method :
+
+
+
+class A{
+    int a,b;
+   void set1(int a,int b){
+        this.a=a;
+        this.b=b;
+   }
+   int get1(){
+    return a+b;
+   }
+    
+}
+class B extends A{
+   void set2(int a,int b){
+    this.a=a;
+    this.b=b;
+
+   }
+   int get2(){
+    return a-b;
+   }
+}
+
+class C extends A{
+  void set3(int a,int b){
+    this.a=a;
+    this.b=b;
+
+  }
+  int get3(){
+    return a*b;
+  }
+}
+
+class D extends A{
+   void set4(int a,int b){
+    this.a=a;
+    this.b=b;
+   }
+   int get4(){
+    return a/b;
+   }
+}
+
+public class Main1{
+    
+    
+    public static void main(String[] args){
+       B obb=new B();
+       obb.set1(10,10);
+       System.out.println(obb.get1());
+       obb.set2(10,3);
+       System.out.println(obb.get2());
+       C obc=new C();
+       obc.set1(20,10);
+       System.out.println(obc.get1());
+       obc.set3(3,4);
+       System.out.println(obc.get3());
+       D obd=new D();
+       obd.set1(30,10);
+       System.out.println(obd.get1());
+       obd.set4(10, 3);
+       System.out.println(obd.get4());
+
+
+    }
+
+------------------------------------------------------------------------------
+instance variable  :constant 
+class A
+	method1 :
+
+class B
+	method2 :
+
+class C
+	method3 :
+
+
+class D
+	method4 :
+
+
+class Main 
+main method :
+
+
+
+class A{
+    String set1="regex",set2="kajal",set3="komal",set4="chaman";
+    String meth1(){
+        return set1;
+    }
+    
+}
+class B extends A{
+   String meth2(){
+    return set2;
+   }
+}
+
+class C extends A{
+  String meth3(){
+    return set3;
+  }
+}
+
+class D extends A{
+   String meth4(){
+    return set4;
+   }
+}
+
+public class Main1{
+    
+    
+    public static void main(String[] args){
+      
+        B obb=new B();
+        System.out.println(obb.meth1());
+        System.out.println(obb.meth2());
+
+        C obc=new C();
+       System.out.println(obc.meth1());
+       System.out.println(obc.meth3());
+
+       D obd=new D();
+       System.out.println(obd.meth1());
+       System.out.println(obd.meth4());
+
+
+    }
+}
+-------------------------------------------------------------------------------
+instance variable  :different name variable  
+class A
+	method1 :
+
+class B
+	method2 :
+
+class C
+	method3 :
+
+
+class D
+	method4 :
+
+
+class Main 
+main method :
+
+
+
+class A{
+    int a,b,c,d,e,f,g,h;
+    int add(int x,int y){
+      a=x;
+      b=y;
+      return a+b;
+    }
+    
+}
+class B extends A{
+   int sub(int x,int y){
+    c=x;
+    d=y;
+    return c-d;
+   }
+}
+
+class C extends A{
+ int multi(int x,int y){
+  e=x;
+  f=y;
+  return e*f;
+ }
+}
+
+class D extends A{
+   int div(int x,int y){
+    g=x;
+    h=y;
+    return g/h;
+   }
+}
+
+public class Main1{
+    
+    
+    public static void main(String[] args){
+      
+        B obb=new B();
+        System.out.println(obb.add(10,20));
+        System.out.println(obb.sub(10,5));
+
+        C obc=new C();
+       System.out.println(obc.add(20,30));
+       System.out.println(obc.multi(4,6));
+
+       D obd=new D();
+       System.out.println(obd.add(50,40));
+       System.out.println(obd.div(50,5));
+
+
+    }
+}
+------------------------------------------------------------------------------
+instance variable  :same variable name  
+class A
+	method1 :
+
+class B
+	method2 :
+
+class C
+	method3 :
+
+
+class D
+	method4 :
+
+
+class Main 
+main method :
+
+
+
+class A{
+    int a,b,c,d,e,f,g,h;
+    int add(int a,int b){
+      this.a=a;
+      this.b=b;
+      return a+b;
+    }
+    
+}
+class B extends A{
+   int sub(int c,int d){
+    this.c=c;
+    this.d=d;
+    return c-d;
+   }
+}
+
+class C extends A{
+ int multi(int e,int f){
+  this.e=e;
+  this.f=f;
+  return e*f;
+ }
+}
+
+class D extends A{
+   int div(int g,int h){
+    this.g=g;
+    this.h=h;
+    return g/h;
+   }
+}
+
+public class Main1{
+    
+    
+    public static void main(String[] args){
+      
+        B obb=new B();
+        System.out.println(obb.add(10,20));
+        System.out.println(obb.sub(10,5));
+
+        C obc=new C();
+       System.out.println(obc.add(20,30));
+       System.out.println(obc.multi(4,6));
+
+       D obd=new D();
+       System.out.println(obd.add(50,40));
+       System.out.println(obd.div(50,5));
+
+
+    }
+}
+----------------------------------------------------------------------------------
+class A
+default constructor 
+
+class B
+default constructor 
+
+class C
+default constructor 
+
+
+class D
+default constructor 
+
+
+class Main 
+default constructor 
+
+main method :access 
+
+
+
+class A{
+    A(){
+      String name="a constructor";
+      System.out.println(name);
+    }
+    
+}
+class B extends A{
+   B(){
+    String name1="b constructor";
+    System.out.println(name1);
+   }
+}
+
+class C extends A{
+ C(){
+  String name2="c constructor";
+  System.out.println(name2);
+ }
+}
+
+class D extends A{
+  D(){
+    String name3="d constructor";
+    System.out.println(name3);
+  }
+   
+}
+
+public class Main1 extends A{
+    Main1(){
+      String name4="Main1 constructor";
+      System.out.println(name4);
+    }
+    
+    public static void main(String[] args){
+      
+      new B();
+      new Main1();
+      new C();
+      new D();
+      
+       
+
+
+    }
+}
+-----------------------------------------------------------------------------------
