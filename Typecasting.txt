@@ -1,0 +1,556 @@
+byte -> short -> char -> int -> long -> float -> double  
+
+byte-->short
+
+public class Main2 {
+    public static void main(String[] args) {
+        byte a=12;
+        short b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-12 12 
+-------------------------------------------------------
+byte-->char
+
+public class Main2 {
+    public static void main(String[] args) {
+        byte a=60;
+        char b=(char)a;
+        System.out.println(a+" "+b);
+    }
+}
+
+output:-60 <
+-------------------------------------------------------
+byte-->int 
+
+ public class Main2 {
+    public static void main(String[] args) {
+        byte a=127;
+        int b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-127 127
+-------------------------------------------------------
+byte-->long
+
+public class Main2 {
+    public static void main(String[] args) {
+        byte a=45;
+        long b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-45 45
+-------------------------------------------------------
+byte-->float
+
+public class Main2 {
+    public static void main(String[] args) {
+        byte a=78;
+        float b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-78 78.0
+-------------------------------------------------------
+byte-->double
+
+public class Main2 {
+    public static void main(String[] args) {
+        byte a=36;
+        double b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:- 36 36.0
+----------------------------------------------------------
+short -> char
+public class Main2 {
+    public static void main(String[] args) {
+        short a=122;
+        char b=(char)a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-122 z
+------------------------------------------------------
+short -> int
+public class Main2 {
+    public static void main(String[] args) {
+        short a=256;
+        int b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-256 256
+------------------------------------------------------- 
+short -> long
+public class Main2 {
+    public static void main(String[] args) {
+        short a=1235;
+        long b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-1235 1235
+-------------------------------------------------------
+short -> float
+public class Main2 {
+    public static void main(String[] args) {
+        short a=14;
+        float b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-14 14.0
+-------------------------------------------------------
+short -> double
+
+public class Main2 {
+    public static void main(String[] args) {
+        short a=89;
+        double b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-89 89.0 
+----------------------------------------------------------
+char -> int
+public class Main2 {
+    public static void main(String[] args) {
+        char a='k';
+        int b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-k 107
+-------------------------------------------------------
+char -> long
+public class Main2 {
+    public static void main(String[] args) {
+        char a='j';
+        long b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-j 106
+------------------------------------------------------
+char ->  float
+public class Main2 {
+    public static void main(String[] args) {
+        char a='p';
+        float b=a;
+        System.out.println(a+" "+b);
+    }
+}
+output:-p 112.0
+------------------------------------------------------
+char -> double
+public class Main2 {
+    public static void main(String[] args) {
+        char a='t';
+        double b=a;
+        System.out.println(a+" "+b);
+    }
+}
+
+output:-t 116.0 
+-------------------------------------------------------
+ int -> long
+
+public class Main2{
+    public static void main(String[] args){
+       int a=12;
+       long b=a;
+       System.out.println(a+" "+b);
+    }
+}
+
+output:-12 12
+-------------------------------------------------------
+int ->  float
+
+public class Main2{
+    public static void main(String[] args){
+       int a=25;
+       float b=a;
+       System.out.println(a+" "+b);
+    }
+}
+output:-25 25.0
+-------------------------------------------------------
+int -> double
+public class Main2{
+    public static void main(String[] args){
+       int a=78;
+       double b=a;
+       System.out.println(a+" "+b);
+    }
+}
+output:-78 78.0
+-------------------------------------------------------
+long -> float
+public class Main2{
+    public static void main(String[] args){
+       long a=788965;
+       float b=a;
+       System.out.println(a+" "+b);
+    }
+}
+output:-788965 788965.0
+-------------------------------------------------------
+long -> double
+public class Main2{
+    public static void main(String[] args){
+       long a=42685967;
+       double b=a;
+       System.out.println(a+" "+b);
+    }
+}
+output:- 42685967 4.2685967E7
+-------------------------------------------------------
+float -> double
+public class Main2{
+    public static void main(String[] args){
+       float a=42685.23f;
+       double b=a;
+       System.out.println(a+" "+b);
+    }
+} 
+output:-42685.23 42685.23046875
+--------------------------------------------
+double -> float -> long -> int -> char -> short -> byte  
+
+double -> float
+public class Main2{
+    public static void main(String[] args){
+        double a=1236.478232356;
+        float b=(float)a;
+       System.out.println(a+" "+b);
+    }
+}
+output:- 1236.478232356   1236.4783
+-------------------------------------------------------
+double -> long
+public class Main2{
+    public static void main(String[] args){
+        double a=1236.478232356;
+        long b=(long)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-1236.478232356  1236
+-------------------------------------------------------  
+double -> int
+public class Main2{
+    public static void main(String[] args){
+        double a=1236456.478232356;
+        int b=(int)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-1236456.478232356  1236456
+-------------------------------------------------------  
+double -> char
+public class Main2{
+    public static void main(String[] args){
+        double a=125.47896;
+        char b=(char)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:- 125.47896  }
+-------------------------------------------------------
+double -> short
+public class Main2{
+    public static void main(String[] args){
+        double a=12545.4789678;
+        short b=(short)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-12545.4789678  12545
+------------------------------------------------------- 
+double ->  byte
+public class Main2{
+    public static void main(String[] args){
+        double a=12545.4789678;
+        byte b=(byte)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:- 12545.4789678  1 
+------------------------------------------------------
+float -> long
+public class Main2{
+    public static void main(String[] args){
+        float a=12578.47f;
+        long b=(long)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-12578.47  12578
+------------------------------------------------------
+float -> int
+public class Main2{
+    public static void main(String[] args){
+        float a=459.12f;
+        int b=(int)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-459.12  459
+------------------------------------------------------ 
+float ->  char
+public class Main2{
+    public static void main(String[] args){
+        float a=126.12f;
+        char b=(char)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-126.12  ~
+-------------------------------------------------------
+float -> short
+public class Main2{
+    public static void main(String[] args){
+        float a=126.12f;
+        short b=(short)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-126.12  126
+------------------------------------------------------
+float -> byte
+public class Main2{
+    public static void main(String[] args){
+        float a=131.12f;
+        byte b=(byte)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:- 131.12  -125
+-------------------------------------------------------
+long -> int
+public class Main2{
+    public static void main(String[] args){
+        long a=153753645896l;
+        int b=(int)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-153753645896  -865176760
+-------------------------------------------------------
+long -> char
+public class Main2{
+    public static void main(String[] args){
+        long a=1537536l;
+        char b=(char)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-1537536  ?
+-------------------------------------------------------
+long -> short
+public class Main2{
+    public static void main(String[] args){
+        long a=1536489l;
+        short b=(short)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-1536489  29161
+-------------------------------------------------------
+long -> byte
+public class Main2{
+    public static void main(String[] args){
+        long a=15975364823l;
+        byte b=(byte)a;
+       System.out.println(a+"  "+b);
+    }
+} 
+output:-15975364823  -41
+------------------------------------------------------
+int -> char
+public class Main2{
+    public static void main(String[] args){
+        int a=122;
+        char b=(char)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-122  z
+-------------------------------------------------------
+int -> short
+public class Main2{
+    public static void main(String[] args){
+        int a=23541;
+        short b=(short)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-23541  23541
+-------------------------------------------------------
+int -> byte
+public class Main2{
+    public static void main(String[] args){
+        int a=23541;
+        byte b=(byte)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-23541  -11
+-------------------------------------------------------
+char -> short
+public class Main2{
+    public static void main(String[] args){
+        char a='k';
+        short b=(short)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-k  107
+-------------------------------------------------------
+char -> byte
+public class Main2{
+    public static void main(String[] args){
+        char a='h';
+        byte b=(byte)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-h  104
+-------------------------------------------------------
+short -> byte
+public class Main2{
+    public static void main(String[] args){
+        short a=4569;
+        byte b=(byte)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-4569  -39 
+------------------------------------------------------
+double -> float -> long -> int -> char -> short -> byte  
+
+double---->long --->float
+public class Main2{
+    public static void main(String[] args){
+        double a=78524.021569;
+        float b=(long)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-78524.021569  78524.0
+------------------------------------------------------- 
+double-->int--->float
+public class Main2{
+    public static void main(String[] args){
+        double a=785247.021569;
+        float b=(int)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-785247.021569  785247.0
+------------------------------------------------------- 
+double--->char--->float
+public class Main2{
+    public static void main(String[] args){
+        double a=785247.021569;
+        float b=(char)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:- 785247.021569  64351.0
+-------------------------------------------------------
+double--short--->float 
+public class Main2{
+    public static void main(String[] args){
+        double a=7852.021569;
+        float b=(short)a;
+       System.out.println(a+"  "+b);
+    }
+}
+output:-7852.021569  7852.0
+-------------------------------------------------------
+long --->short--->int
+public class Main2{
+    public static void main(String[] args){
+        long a=7852021569l;
+        int b=(short)a;
+       System.out.println(a+"  "+b);
+    }
+} 
+output:-7852021569  22337
+solution code error 
+
+---------------------------------------------------
+user input 
+-----------------------------------------------------------------
+file A 
+employe 
+
+id
+name
+companyname
+department
+contact
+address 
+email
+password 
+salary 
+
+file B 
+work as data type variable 
+----------------------------------------------------------------
+file A
+book class 
+
+title 
+author 
+type
+name
+page
+content
+price 
+date
+
+file B
+work as data type variable 
+
+----------------------------------------------------------------
+file A
+ticket booking class 
+name
+address
+contact
+gender
+total_number
+movie_name
+
+file B
+work as data type variable 
+
+----------------------------------------------------------------
+file A
+College class 
+name
+fname
+mname
+graduation 
+address
+contact
+group_name
+semester
+
+
+file B
+work as data type variable 
+
+
+
+
+
