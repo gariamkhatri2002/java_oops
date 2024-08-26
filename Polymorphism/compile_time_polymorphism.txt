@@ -1,0 +1,49 @@
+Q.1)single level inheritance :method overloading
+ANS:-
+class A{
+    void show(){
+        System.out.println("class A");
+    }
+    
+}
+class B extends A{
+    void show(){
+        System.out.println("class B");
+    }
+}
+public class Main2{
+    public static void main(String[] args){
+        B k=new B();
+        k.show();
+        
+    }
+}
+
+
+output:-class B 
+
+problem solved code:-
+----------------------
+ class A{
+    void show(){
+        System.out.println("class A");
+    }
+    
+}
+class B extends A{
+    void show(String name){
+        System.out.println(name);
+    }
+}
+public class Main2{
+    public static void main(String[] args){
+        B k=new B();
+        k.show();
+        k.show("class B");
+    }
+}
+output:-class A
+        class B
+
+-------------------------------------------------------
+
